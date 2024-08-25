@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: src/resources/bonus.csv
+  checksum: 3a2abf18b6747fe9351badef6e3e780683669112f94ce80e22aba46843a6a099
+version: ""
