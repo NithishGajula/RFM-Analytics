@@ -1,6 +1,7 @@
 from src.rfm_analysis import calculate_rfm_scores, calculate_rfm_values
 from src.process_data import combine_cash_and_bonus_data
 from src.segmentation import add_segmentation
+from src.visuals import plot_visuals
 from pyspark.sql import SparkSession
 
 
@@ -20,6 +21,8 @@ def main():
     segmented_df = add_segmentation(rfm_scores_df)
 
     segmented_df.write.csv(output_path, header=True, mode="overwrite")
+
+    plot_visuals(segmented_df)
 
     spark.stop()
 
